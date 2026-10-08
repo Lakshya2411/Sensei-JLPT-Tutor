@@ -1,0 +1,909 @@
+[
+  {
+    "id": "te-iru",
+    "pattern": "〜ている / 〜ています",
+    "level": "N5",
+    "meaning": "is doing (ongoing action) / is in a state (result of a change)",
+    "formation": "Verb て-form + いる (polite: います)",
+    "explanation": "With action verbs like 読む or 食べる it means an action in progress: 読んでいます = is reading. With change-of-state verbs like 結婚する, 住む, 知る it describes the state that results from the change: 結婚しています = is married (not 'is getting married'). In casual speech the い is often dropped: 読んでる.",
+    "aliases": [
+      "teiru",
+      "te iru",
+      "progressive",
+      "continuous",
+      "is doing",
+      "ongoing",
+      "state",
+      "-ing"
+    ],
+    "markers": [
+      "[てで]い(る|ます|ました|ません|た|ない|て)"
+    ],
+    "examples": [
+      {
+        "ja": "今、本を読んでいます。",
+        "en": "I'm reading a book now."
+      },
+      {
+        "ja": "兄は東京に住んでいます。",
+        "en": "My older brother lives in Tokyo."
+      }
+    ]
+  },
+  {
+    "id": "te-kudasai",
+    "pattern": "〜てください",
+    "level": "N5",
+    "meaning": "please do ~",
+    "formation": "Verb て-form + ください",
+    "explanation": "A polite request. For 'please don't', use the negative form: ないでください (見ないでください = please don't look). For a softer request, use 〜てくださいませんか.",
+    "aliases": [
+      "tekudasai",
+      "please do",
+      "request",
+      "please"
+    ],
+    "markers": [
+      "[てで]ください",
+      "ないでください"
+    ],
+    "examples": [
+      {
+        "ja": "ここに名前を書いてください。",
+        "en": "Please write your name here."
+      },
+      {
+        "ja": "もう少しゆっくり話してください。",
+        "en": "Please speak a little more slowly."
+      }
+    ]
+  },
+  {
+    "id": "tai",
+    "pattern": "〜たい",
+    "level": "N5",
+    "meaning": "want to do ~",
+    "formation": "Verb ます-stem + たい (食べます → 食べたい). Conjugates like an い-adjective: たくない, たかった, たくなかった",
+    "explanation": "Expresses the speaker's own desire, or asks about the listener's. For a third person's wishes use 〜たがっている (弟はゲームをしたがっている). The object can be marked with を or が: 水が飲みたい / 水を飲みたい.",
+    "aliases": [
+      "tai",
+      "want to",
+      "desire",
+      "wish"
+    ],
+    "markers": [
+      "たい(です|と|の|ん|。|$|、)",
+      "たくない",
+      "たかった",
+      "たがって"
+    ],
+    "examples": [
+      {
+        "ja": "日本へ行きたいです。",
+        "en": "I want to go to Japan."
+      },
+      {
+        "ja": "何が食べたいですか。",
+        "en": "What do you want to eat?"
+      }
+    ]
+  },
+  {
+    "id": "masenka",
+    "pattern": "〜ませんか",
+    "level": "N5",
+    "meaning": "won't you ~? / would you like to ~? (invitation)",
+    "formation": "Verb ます-stem + ませんか",
+    "explanation": "A polite invitation. Although it is grammatically negative, it is softer than 〜ましょうか and leaves the listener free to decline. Reply with いいですね or ええ、〜ましょう to accept.",
+    "aliases": [
+      "masenka",
+      "invitation",
+      "would you like to",
+      "invite",
+      "won't you"
+    ],
+    "markers": [
+      "ませんか"
+    ],
+    "examples": [
+      {
+        "ja": "いっしょに映画を見ませんか。",
+        "en": "Would you like to watch a movie together?"
+      },
+      {
+        "ja": "週末、テニスをしませんか。",
+        "en": "Won't you play tennis this weekend?"
+      }
+    ]
+  },
+  {
+    "id": "mashou",
+    "pattern": "〜ましょう",
+    "level": "N5",
+    "meaning": "let's ~ / shall we ~?",
+    "formation": "Verb ます-stem + ましょう (casual: volitional form, e.g. 行こう)",
+    "explanation": "A suggestion to do something together. With か (〜ましょうか) it becomes an offer: 手伝いましょうか = Shall I help you? The casual equivalent is the volitional form: 食べよう, 行こう.",
+    "aliases": [
+      "mashou",
+      "lets",
+      "let's",
+      "shall we",
+      "suggestion",
+      "volitional"
+    ],
+    "markers": [
+      "ましょう"
+    ],
+    "examples": [
+      {
+        "ja": "少し休みましょう。",
+        "en": "Let's take a short break."
+      },
+      {
+        "ja": "荷物を持ちましょうか。",
+        "en": "Shall I carry your bags?"
+      }
+    ]
+  },
+  {
+    "id": "temo-ii",
+    "pattern": "〜てもいい",
+    "level": "N5",
+    "meaning": "it's okay to ~ / may I ~? (permission)",
+    "formation": "Verb て-form + も + いい (polite: いいです)",
+    "explanation": "Gives or asks for permission. 〜てもいいですか asks 'May I ~?'. The negative 〜なくてもいい means 'you don't have to ~': 来なくてもいいです = You don't have to come.",
+    "aliases": [
+      "temoii",
+      "permission",
+      "may i",
+      "is it okay",
+      "allowed",
+      "don't have to"
+    ],
+    "markers": [
+      "[てで]も(いい|良い|よい|かまわない|構わない)",
+      "なくても(いい|良い|よい)"
+    ],
+    "examples": [
+      {
+        "ja": "窓を開けてもいいですか。",
+        "en": "May I open the window?"
+      },
+      {
+        "ja": "明日は来なくてもいいです。",
+        "en": "You don't have to come tomorrow."
+      }
+    ]
+  },
+  {
+    "id": "tewa-ikenai",
+    "pattern": "〜てはいけない",
+    "level": "N5",
+    "meaning": "must not ~ (prohibition)",
+    "formation": "Verb て-form + は + いけない (polite: いけません). Casual: 〜ちゃだめ / 〜じゃだめ",
+    "explanation": "States that something is not allowed, often a rule. It is strong, so in polite requests to a person 〜ないでください is gentler. In speech ては contracts to ちゃ and では to じゃ: 食べちゃだめ.",
+    "aliases": [
+      "tewaikenai",
+      "must not",
+      "prohibition",
+      "not allowed",
+      "forbidden",
+      "can't"
+    ],
+    "markers": [
+      "[てで]は(いけ|だめ|ダメ|ならな)",
+      "[ちじ]ゃ(いけ|だめ|ダメ)"
+    ],
+    "examples": [
+      {
+        "ja": "教室で食べてはいけません。",
+        "en": "You must not eat in the classroom."
+      },
+      {
+        "ja": "ここで写真を撮ってはいけません。",
+        "en": "You may not take photos here."
+      }
+    ]
+  },
+  {
+    "id": "kara-reason",
+    "pattern": "〜から (reason)",
+    "level": "N5",
+    "meaning": "because ~ / so ~",
+    "formation": "Plain or polite form + から (nouns and な-adjectives: だから / ですから)",
+    "explanation": "Gives a reason; the reason comes BEFORE から and the result after it: 雨だから、行きません = Because it's raining, I won't go. Don't confuse it with から meaning 'from' after a noun (東京から). ので is a softer, more objective alternative.",
+    "aliases": [
+      "kara",
+      "because",
+      "reason",
+      "so",
+      "since",
+      "cause"
+    ],
+    "markers": [
+      "(い|る|た|だ|です|ます|ない|う)から(?!だ)"
+    ],
+    "examples": [
+      {
+        "ja": "雨が降っているから、家にいます。",
+        "en": "It's raining, so I'm staying home."
+      },
+      {
+        "ja": "暑いですから、窓を開けましょう。",
+        "en": "It's hot, so let's open the window."
+      }
+    ]
+  },
+  {
+    "id": "ga-but",
+    "pattern": "〜が (but)",
+    "level": "N5",
+    "meaning": "but / although",
+    "formation": "Clause + が + clause",
+    "explanation": "Joins two contrasting clauses, more formal than けど. It is also used softly to introduce a topic before a request: すみませんが、… (Excuse me, but…). Not to be confused with the subject particle が.",
+    "aliases": [
+      "ga",
+      "but",
+      "however",
+      "although",
+      "contrast",
+      "kedo"
+    ],
+    "markers": [
+      "(です|ます|ません|でした|ました|た|だ|ない|い)が、"
+    ],
+    "examples": [
+      {
+        "ja": "この店は安いですが、おいしくないです。",
+        "en": "This shop is cheap, but it isn't tasty."
+      },
+      {
+        "ja": "すみませんが、駅はどこですか。",
+        "en": "Excuse me, but where is the station?"
+      }
+    ]
+  },
+  {
+    "id": "mae-ni",
+    "pattern": "〜前に",
+    "level": "N5",
+    "meaning": "before ~",
+    "formation": "Verb dictionary form + 前に / Noun + の + 前に",
+    "explanation": "The verb before 前に is always in dictionary (non-past) form, even when talking about the past: 寝る前に歯をみがきました. A time length + 前 means 'ago': 三年前 = three years ago.",
+    "aliases": [
+      "maeni",
+      "before",
+      "prior to",
+      "ago"
+    ],
+    "markers": [
+      "[うくぐすつぬぶむる]前に",
+      "[うくぐすつぬぶむる]まえに",
+      "の前に",
+      "のまえに"
+    ],
+    "examples": [
+      {
+        "ja": "寝る前に歯をみがきます。",
+        "en": "I brush my teeth before going to bed."
+      },
+      {
+        "ja": "食事の前に手を洗ってください。",
+        "en": "Please wash your hands before the meal."
+      }
+    ]
+  },
+  {
+    "id": "ato-de",
+    "pattern": "〜後で",
+    "level": "N5",
+    "meaning": "after ~",
+    "formation": "Verb た-form + 後で / Noun + の + 後で",
+    "explanation": "The verb before 後で is always in た-form, even for future actions: 宿題をした後で遊びます. Compare 〜てから, which stresses the order of two actions (do A, then B).",
+    "aliases": [
+      "atode",
+      "after",
+      "afterwards",
+      "later"
+    ],
+    "markers": [
+      "[ただ](後|あと)で",
+      "の(後|あと)で"
+    ],
+    "examples": [
+      {
+        "ja": "宿題をした後で、テレビを見ます。",
+        "en": "After doing my homework, I watch TV."
+      },
+      {
+        "ja": "授業の後で、図書館に行きました。",
+        "en": "After class, I went to the library."
+      }
+    ]
+  },
+  {
+    "id": "to-omou",
+    "pattern": "〜と思う",
+    "level": "N5",
+    "meaning": "I think that ~",
+    "formation": "Plain form + と思う (nouns and な-adjectives: だと思う)",
+    "explanation": "Expresses the speaker's opinion or guess. The clause before と must be in plain form, so nouns and な-adjectives need だ: 学生だと思います. 〜と思っている is used for opinions held over time, or for other people's opinions.",
+    "aliases": [
+      "toomou",
+      "i think",
+      "opinion",
+      "think that",
+      "guess"
+    ],
+    "markers": [
+      "と(思|おも)(う|い|っ)"
+    ],
+    "examples": [
+      {
+        "ja": "明日は晴れると思います。",
+        "en": "I think it will be sunny tomorrow."
+      },
+      {
+        "ja": "彼は来ないと思う。",
+        "en": "I don't think he'll come."
+      }
+    ]
+  },
+  {
+    "id": "ta-koto-ga-aru",
+    "pattern": "〜たことがある",
+    "level": "N4",
+    "meaning": "have done ~ before (experience)",
+    "formation": "Verb た-form + ことがある (polite: ことがあります)",
+    "explanation": "Talks about past experience, like the English present perfect 'have (ever) done'. The negative 〜たことがない means 'have never done'. Compare dictionary form + ことがある, which means 'sometimes ~'.",
+    "aliases": [
+      "takotogaaru",
+      "have done",
+      "experience",
+      "ever",
+      "never",
+      "before",
+      "have you ever"
+    ],
+    "markers": [
+      "[ただ]ことが(あ|な)"
+    ],
+    "examples": [
+      {
+        "ja": "富士山に登ったことがあります。",
+        "en": "I have climbed Mt. Fuji."
+      },
+      {
+        "ja": "納豆を食べたことがありません。",
+        "en": "I have never eaten natto."
+      }
+    ]
+  },
+  {
+    "id": "nagara",
+    "pattern": "〜ながら",
+    "level": "N4",
+    "meaning": "while doing ~ (two actions at the same time)",
+    "formation": "Verb ます-stem + ながら",
+    "explanation": "One person does two actions at once. The main action comes last; the ながら action is the background: 音楽を聞きながら勉強します = I study (main) while listening to music. Both actions must have the same subject.",
+    "aliases": [
+      "nagara",
+      "while",
+      "at the same time",
+      "simultaneous"
+    ],
+    "markers": [
+      "ながら"
+    ],
+    "examples": [
+      {
+        "ja": "音楽を聞きながら勉強します。",
+        "en": "I study while listening to music."
+      },
+      {
+        "ja": "歩きながら電話で話さないでください。",
+        "en": "Please don't talk on the phone while walking."
+      }
+    ]
+  },
+  {
+    "id": "te-shimau",
+    "pattern": "〜てしまう",
+    "level": "N4",
+    "meaning": "to do ~ completely / to (regrettably) end up doing ~",
+    "formation": "Verb て-form + しまう. Casual: 〜ちゃう / 〜じゃう",
+    "explanation": "Two uses: (1) completion: 本を全部読んでしまった = I finished reading the whole book; (2) regret or something unintended: 財布をなくしてしまった = I (unfortunately) lost my wallet. Context tells you which.",
+    "aliases": [
+      "teshimau",
+      "chau",
+      "regret",
+      "accidentally",
+      "completely",
+      "end up",
+      "finish"
+    ],
+    "markers": [
+      "[てで]しま(う|った|い|わ)",
+      "[ちじ]ゃ(う|った|いま)"
+    ],
+    "examples": [
+      {
+        "ja": "財布をなくしてしまいました。",
+        "en": "I (unfortunately) lost my wallet."
+      },
+      {
+        "ja": "ケーキを全部食べちゃった。",
+        "en": "I ate the whole cake."
+      }
+    ]
+  },
+  {
+    "id": "te-oku",
+    "pattern": "〜ておく",
+    "level": "N4",
+    "meaning": "to do ~ in advance / to leave something as it is",
+    "formation": "Verb て-form + おく. Casual: 〜とく / 〜どく",
+    "explanation": "Doing something in preparation for later: 予約しておく = make a reservation in advance. It can also mean leaving something in a state: 窓を開けておいてください = Please leave the window open.",
+    "aliases": [
+      "teoku",
+      "in advance",
+      "prepare",
+      "beforehand",
+      "leave as is"
+    ],
+    "markers": [
+      "[てで]お(く|いた|き|いて|こう)"
+    ],
+    "examples": [
+      {
+        "ja": "旅行の前にホテルを予約しておきます。",
+        "en": "I'll book the hotel before the trip."
+      },
+      {
+        "ja": "窓を開けておいてください。",
+        "en": "Please leave the window open."
+      }
+    ]
+  },
+  {
+    "id": "tara",
+    "pattern": "〜たら",
+    "level": "N4",
+    "meaning": "if ~ / when ~ (after ~ happens)",
+    "formation": "Plain past form + ら (行った → 行ったら, 安かった → 安かったら, 雨だった → 雨だったら)",
+    "explanation": "The most flexible conditional. It means 'if' for hypotheticals and 'when/once' for things sure to happen: 駅に着いたら電話してください = Call me when you arrive. Unlike ば and と, the second clause can be a request, suggestion or wish.",
+    "aliases": [
+      "tara",
+      "if",
+      "when",
+      "conditional",
+      "once",
+      "after"
+    ],
+    "markers": [
+      "(?<!だ)[ただ]ら(?![しだ])"
+    ],
+    "examples": [
+      {
+        "ja": "駅に着いたら、電話してください。",
+        "en": "Please call me when you get to the station."
+      },
+      {
+        "ja": "雨が降ったら、行きません。",
+        "en": "If it rains, I won't go."
+      }
+    ]
+  },
+  {
+    "id": "ba",
+    "pattern": "〜ば",
+    "level": "N4",
+    "meaning": "if ~ (conditional)",
+    "formation": "Verbs: change the final u-sound to e + ば (行く → 行けば, する → すれば). い-adjectives: い → ければ (安い → 安ければ). Nouns/な-adjectives: なら or であれば",
+    "explanation": "A conditional focusing on what is needed for the result: 練習すれば上手になる = If you practise, you'll get better. The second clause usually can't be a request or wish when the first clause has an action verb; use たら for that.",
+    "aliases": [
+      "ba",
+      "if",
+      "conditional",
+      "provided that",
+      "eba",
+      "kereba"
+    ],
+    "markers": [
+      "(?<!たと)(?<!例)(?<!なけ)(?:[えせてねへめれげべ]|(?<!な)け)ば(?!かり|あ)"
+    ],
+    "examples": [
+      {
+        "ja": "安ければ、買います。",
+        "en": "If it's cheap, I'll buy it."
+      },
+      {
+        "ja": "毎日練習すれば、上手になります。",
+        "en": "If you practise every day, you'll get better."
+      }
+    ]
+  },
+  {
+    "id": "nakereba-naranai",
+    "pattern": "〜なければならない",
+    "level": "N4",
+    "meaning": "must ~ / have to ~",
+    "formation": "Verb ない-form (drop い) + ければならない. Also: なくてはいけない. Casual: 〜なきゃ / 〜なくちゃ",
+    "explanation": "Expresses obligation. Literally 'if you don't do it, it won't do'. ならない sounds more like a general rule; いけない sounds more like personal or situational need. In speech the second half is often dropped: 行かなきゃ.",
+    "aliases": [
+      "nakerebanaranai",
+      "must",
+      "have to",
+      "obligation",
+      "need to",
+      "nakya",
+      "nakucha"
+    ],
+    "markers": [
+      "なければ(なら|なり|いけ|だめ)",
+      "なくては(なら|なり|いけ|だめ)",
+      "なきゃ",
+      "なくちゃ"
+    ],
+    "examples": [
+      {
+        "ja": "明日は早く起きなければなりません。",
+        "en": "I have to get up early tomorrow."
+      },
+      {
+        "ja": "もう帰らなきゃ。",
+        "en": "I have to go home now."
+      }
+    ]
+  },
+  {
+    "id": "sou-appearance",
+    "pattern": "〜そうだ (looks like)",
+    "level": "N4",
+    "meaning": "looks like ~ / seems about to ~ (based on what you see)",
+    "formation": "Verb ます-stem + そう / い-adjective without い + そう (おいしい → おいしそう; いい → よさそう) / な-adjective + そう",
+    "explanation": "Your own impression from appearance, or a sign that something is about to happen: 雨が降りそうです = It looks like it's going to rain. Compare the hearsay そうだ, which attaches to the plain form (降るそうです = I hear it will rain).",
+    "aliases": [
+      "sou",
+      "looks like",
+      "seems",
+      "appearance",
+      "about to",
+      "looks delicious"
+    ],
+    "markers": [
+      "(?<=[\\u3040-\\u309f\\u4e00-\\u9fff])(?<![るたいだもはがう])そう(です|だ|な|に|で)",
+      "[よな]さそう"
+    ],
+    "examples": [
+      {
+        "ja": "このケーキはおいしそうですね。",
+        "en": "This cake looks delicious."
+      },
+      {
+        "ja": "雨が降りそうです。",
+        "en": "It looks like it's going to rain."
+      }
+    ]
+  },
+  {
+    "id": "sou-hearsay",
+    "pattern": "〜そうだ (I hear)",
+    "level": "N4",
+    "meaning": "I hear that ~ / apparently ~ (reported information)",
+    "formation": "Plain form + そうだ (nouns and な-adjectives: だそうだ)",
+    "explanation": "Passes on information you got from someone else or from the news. The source can be given with によると: 天気予報によると、明日は雨だそうです. It looks similar to the appearance そう, but it attaches to the full plain form.",
+    "aliases": [
+      "sou",
+      "i hear",
+      "hearsay",
+      "apparently",
+      "they say",
+      "reportedly"
+    ],
+    "markers": [
+      "[るたいだ]そう(です|だ)"
+    ],
+    "examples": [
+      {
+        "ja": "明日は雨が降るそうです。",
+        "en": "I hear it's going to rain tomorrow."
+      },
+      {
+        "ja": "あのレストランはおいしいそうです。",
+        "en": "I hear that restaurant is good."
+      }
+    ]
+  },
+  {
+    "id": "you-ni-suru",
+    "pattern": "〜ようにする",
+    "level": "N4",
+    "meaning": "to make an effort to ~ / to make sure to ~",
+    "formation": "Verb dictionary form or ない-form + ようにする",
+    "explanation": "Describes a conscious effort or habit. 〜ようにしている means you are keeping up the habit: 毎日野菜を食べるようにしています. Compare 〜ようになる, which describes a change that happened (話せるようになった = I became able to speak).",
+    "aliases": [
+      "younisuru",
+      "try to",
+      "make an effort",
+      "make sure",
+      "habit"
+    ],
+    "markers": [
+      "ように(する|し)"
+    ],
+    "examples": [
+      {
+        "ja": "毎日野菜を食べるようにしています。",
+        "en": "I make a point of eating vegetables every day."
+      },
+      {
+        "ja": "夜遅くまで起きないようにします。",
+        "en": "I'll try not to stay up late."
+      }
+    ]
+  },
+  {
+    "id": "tsumori",
+    "pattern": "〜つもり",
+    "level": "N4",
+    "meaning": "intend to ~ / plan to ~",
+    "formation": "Verb dictionary form or ない-form + つもりだ",
+    "explanation": "States a fairly firm plan. 行かないつもりです = I intend not to go (more natural than 行くつもりはありません, which is a strong denial). Asking a superior 〜つもりですか can sound blunt; 〜予定ですか is softer.",
+    "aliases": [
+      "tsumori",
+      "intend",
+      "plan to",
+      "intention",
+      "going to"
+    ],
+    "markers": [
+      "つもり"
+    ],
+    "examples": [
+      {
+        "ja": "来年、日本へ留学するつもりです。",
+        "en": "I plan to study abroad in Japan next year."
+      },
+      {
+        "ja": "今日は外に出ないつもりです。",
+        "en": "I don't intend to go out today."
+      }
+    ]
+  },
+  {
+    "id": "noni",
+    "pattern": "〜のに (although)",
+    "level": "N4",
+    "meaning": "even though ~ / despite ~ (often with surprise or frustration)",
+    "formation": "Plain form + のに (nouns and な-adjectives: なのに)",
+    "explanation": "Shows that the result is contrary to expectation, usually with a feeling of disappointment: たくさん勉強したのに、試験に落ちた. Note: dictionary form + のに can also mean 'in order to / for' (この箱は本を入れるのに使います).",
+    "aliases": [
+      "noni",
+      "even though",
+      "although",
+      "despite",
+      "in spite of"
+    ],
+    "markers": [
+      "のに"
+    ],
+    "examples": [
+      {
+        "ja": "たくさん勉強したのに、試験に落ちました。",
+        "en": "Even though I studied a lot, I failed the exam."
+      },
+      {
+        "ja": "日曜日なのに、会社に行かなければなりません。",
+        "en": "Even though it's Sunday, I have to go to work."
+      }
+    ]
+  },
+  {
+    "id": "te-miru",
+    "pattern": "〜てみる",
+    "level": "N4",
+    "meaning": "to try doing ~ (to see what it's like)",
+    "formation": "Verb て-form + みる",
+    "explanation": "Doing something to find out how it is: 着てみる = try it on. This is different from 'try hard to': that is 〜ようとする. 〜てみたい = I'd like to try ~.",
+    "aliases": [
+      "temiru",
+      "try",
+      "try doing",
+      "give it a try",
+      "see what it's like"
+    ],
+    "markers": [
+      "[てで]み(る|ます|まし|たい|て|よう|た|ない)"
+    ],
+    "examples": [
+      {
+        "ja": "この服を着てみてもいいですか。",
+        "en": "May I try these clothes on?"
+      },
+      {
+        "ja": "日本語で手紙を書いてみました。",
+        "en": "I tried writing a letter in Japanese."
+      }
+    ]
+  },
+  {
+    "id": "sugiru",
+    "pattern": "〜すぎる",
+    "level": "N4",
+    "meaning": "too much ~ / excessively ~",
+    "formation": "Verb ます-stem + すぎる / い-adjective without い + すぎる (高い → 高すぎる; いい → よすぎる) / な-adjective + すぎる",
+    "explanation": "Says something goes beyond the right amount: 食べすぎた = I ate too much. It conjugates as a る-verb (すぎます, すぎた). The noun form すぎ is common too: 飲みすぎに注意してください.",
+    "aliases": [
+      "sugiru",
+      "too much",
+      "too",
+      "excessively",
+      "overdo"
+    ],
+    "markers": [
+      "すぎ(る|ます|まし|た|て|に|ない)",
+      "過ぎ(る|ます|まし|た|て)"
+    ],
+    "examples": [
+      {
+        "ja": "昨日は食べすぎました。",
+        "en": "I ate too much yesterday."
+      },
+      {
+        "ja": "この問題は難しすぎます。",
+        "en": "This problem is too difficult."
+      }
+    ]
+  },
+  {
+    "id": "ta-hou-ga-ii",
+    "pattern": "〜たほうがいい",
+    "level": "N4",
+    "meaning": "you had better ~ / you should ~ (advice)",
+    "formation": "Verb た-form + ほうがいい / Verb ない-form + ほうがいい (negative advice)",
+    "explanation": "Gives advice. The positive uses the た-form even though it's about the future: 休んだほうがいい = You should rest. Negative advice uses the plain ない-form, not なかった: 行かないほうがいい.",
+    "aliases": [
+      "tahougaii",
+      "should",
+      "had better",
+      "advice",
+      "recommend",
+      "ought to"
+    ],
+    "markers": [
+      "[ただ](ほう|方)が(いい|良い|よい|いいです)",
+      "ない(ほう|方)が(いい|良い|よい)"
+    ],
+    "examples": [
+      {
+        "ja": "熱があるから、休んだほうがいいですよ。",
+        "en": "You have a fever, so you'd better rest."
+      },
+      {
+        "ja": "夜は一人で歩かないほうがいいです。",
+        "en": "You shouldn't walk alone at night."
+      }
+    ]
+  },
+  {
+    "id": "koto-ga-dekiru",
+    "pattern": "〜ことができる",
+    "level": "N4",
+    "meaning": "can ~ / be able to ~",
+    "formation": "Verb dictionary form + ことができる / Noun + ができる",
+    "explanation": "Expresses ability or possibility, a little more formal than the potential form (読める). 漢字を読むことができます = 漢字が読めます. With nouns, just use ができる: 日本語ができます.",
+    "aliases": [
+      "kotogadekiru",
+      "can",
+      "able to",
+      "ability",
+      "possible",
+      "potential"
+    ],
+    "markers": [
+      "ことが(でき|出来)"
+    ],
+    "examples": [
+      {
+        "ja": "私は漢字を読むことができます。",
+        "en": "I can read kanji."
+      },
+      {
+        "ja": "ここでお金を両替することができますか。",
+        "en": "Can I exchange money here?"
+      }
+    ]
+  },
+  {
+    "id": "particle-ni-he",
+    "pattern": "に / へ (destination, time)",
+    "level": "N5",
+    "meaning": "to (a place) / at (a specific time)",
+    "formation": "Place + に/へ + movement verb (行く, 来る, 帰る); Time + に",
+    "explanation": "With movement verbs, the destination takes に or へ, not を: 学校に行きます. に also marks a specific time (7時に起きます) and where something exists (部屋に猫がいます). Relative times like 今日, 明日, 毎日 take no particle. を with a movement verb means moving THROUGH or OUT OF a place (公園を歩く, 家を出る).",
+    "aliases": [
+      "ni",
+      "he",
+      "e",
+      "destination",
+      "to",
+      "go to",
+      "time",
+      "particle",
+      "wo vs ni",
+      "を or に",
+      "at"
+    ],
+    "markers": [],
+    "examples": [
+      {
+        "ja": "毎朝七時に起きます。",
+        "en": "I get up at seven every morning."
+      },
+      {
+        "ja": "来週、大阪へ行きます。",
+        "en": "I'm going to Osaka next week."
+      }
+    ]
+  },
+  {
+    "id": "particle-de",
+    "pattern": "で (place of action, means)",
+    "level": "N5",
+    "meaning": "at / in (where an action happens); by / with (means)",
+    "formation": "Place + で + action verb; Tool or method + で",
+    "explanation": "で marks where an action takes place: 図書館で勉強します. Compare に, which marks where something exists (図書館に本があります) or a destination. で also marks the means: バスで行きます (by bus), 日本語で話します (in Japanese).",
+    "aliases": [
+      "de",
+      "place of action",
+      "at",
+      "in",
+      "by means of",
+      "with",
+      "particle",
+      "ni vs de",
+      "に or で"
+    ],
+    "markers": [],
+    "examples": [
+      {
+        "ja": "図書館で勉強します。",
+        "en": "I study at the library."
+      },
+      {
+        "ja": "バスで学校に行きます。",
+        "en": "I go to school by bus."
+      }
+    ]
+  },
+  {
+    "id": "particle-wa-ga",
+    "pattern": "は vs が",
+    "level": "N5",
+    "meaning": "は marks the topic; が marks the subject (often new or focused information)",
+    "formation": "Noun + は / Noun + が",
+    "explanation": "は sets the topic ('as for X'), and is used for known information and contrast. が marks the grammatical subject and puts focus on it, e.g. in answers to question words (誰が来ましたか → 田中さんが来ました). Question words themselves never take は: 何が, 誰が. が is also used with 好き, 上手, ある/いる and inside relative clauses (私が書いた手紙).",
+    "aliases": [
+      "wa",
+      "ga",
+      "topic",
+      "subject",
+      "particle",
+      "wa vs ga",
+      "は or が",
+      "contrast"
+    ],
+    "markers": [],
+    "examples": [
+      {
+        "ja": "私は学生です。",
+        "en": "I am a student."
+      },
+      {
+        "ja": "誰が窓を開けましたか。",
+        "en": "Who opened the window?"
+      }
+    ]
+  }
+]

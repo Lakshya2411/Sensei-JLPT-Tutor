@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sensei · JLPT Tutor</title>
+  <meta name="description" content="A grounded Japanese tutor for JLPT N5–N4: sentence breakdowns, practice questions and corrections.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand">
+      <span class="hanko" aria-hidden="true">先</span>
+      <div>
+        <h1>Sensei</h1>
+        <p class="tagline">A JLPT N5–N4 tutor that cites its sources</p>
+      </div>
+    </div>
+    <span id="status" class="status" title="Backend status">connecting…</span>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="explain">Explain <span lang="ja">解説</span></button>
+    <button role="tab" aria-selected="false" data-tab="practice">Practice <span lang="ja">練習</span></button>
+    <button role="tab" aria-selected="false" data-tab="correct">Correct <span lang="ja">添削</span></button>
+  </nav>
+
+  <main>
+    <!-- EXPLAIN -->
+    <section id="explain" class="panel" role="tabpanel">
+      <form id="explain-form" class="ask">
+        <label for="explain-input">Paste a Japanese sentence</label>
+        <div class="row">
+          <input id="explain-input" lang="ja" maxlength="300" autocomplete="off" placeholder="音楽を聞きながら勉強しています。" required>
+          <button type="submit">Explain</button>
+        </div>
+        <div class="samples" data-target="explain-input">
+          <button type="button">財布をなくしてしまいました。</button>
+          <button type="button">駅に着いたら、電話してください。</button>
+          <button type="button">雨が降りそうですね。</button>
+        </div>
+      </form>
+      <div id="explain-out" class="out" aria-live="polite"></div>
+    </section>
+
+    <!-- PRACTICE -->
+    <section id="practice" class="panel" role="tabpanel" hidden>
+      <form id="practice-form" class="ask">
+        <label for="practice-select">Pick a grammar point</label>
+        <div class="row">
+          <select id="practice-select" required></select>
+          <select id="practice-n" aria-label="Number of questions">
+            <option>3</option><option selected>5</option><option>8</option>
+          </select>
+          <button type="submit">Generate</button>
+        </div>
+      </form>
+      <div id="practice-out" class="out" aria-live="polite"></div>
+    </section>
+
+    <!-- CORRECT -->
+    <section id="correct" class="panel" role="tabpanel" hidden>
+      <form id="correct-form" class="ask">
+        <label for="correct-input">Write a sentence in Japanese and get it checked</label>
+        <div class="row">
+          <input id="correct-input" lang="ja" maxlength="300" autocomplete="off" placeholder="私は学校を行きます。" required>
+          <button type="submit">Check</button>
+        </div>
+        <div class="samples" data-target="correct-input">
+          <button type="button">私は学校を行きます。</button>
+          <button type="button">昨日は映画を見るました。</button>
+        </div>
+      </form>
+      <div id="correct-out" class="out" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    Example sentences from <a href="https://tatoeba.org" target="_blank" rel="noopener">Tatoeba</a> (CC BY 2.0 FR).
+    Dictionary data from <a href="https://www.edrdg.org/jmdict/j_jmdict.html" target="_blank" rel="noopener">JMdict</a> (CC BY-SA 4.0).
+    AI answers can be wrong; check the cited grammar notes.
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

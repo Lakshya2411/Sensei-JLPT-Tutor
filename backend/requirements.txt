@@ -1,0 +1,8 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+numpy>=1.26
+sudachipy>=0.6.8
+sudachidict_small>=20240716
+python-dotenv>=1.0
+pytest>=8.0
+httpx>=0.27
