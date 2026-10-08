@@ -203,18 +203,52 @@ class TestBuildScripts(unittest.TestCase):
         from build_index import build_dictionary
 
         xml = """<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE JMdict [<!ENTITY uk "word usually written using kana alone">]>
 <JMdict>
 <entry><k_ele><keb>猫</keb><ke_pri>ichi1</ke_pri></k_ele><r_ele><reb>ねこ</reb></r_ele>
-<sense><gloss>cat</gloss></sense></entry>
+<sense><gloss>cat</gloss></sense><sense><gloss>shamisen</gloss></sense></entry>
+<entry><k_ele><keb>羽</keb><ke_pri>ichi1</ke_pri></k_ele><r_ele><reb>は</reb><re_pri>ichi1</re_pri></r_ele>
+<sense><gloss>feather</gloss></sense></entry>
+<entry><k_ele><keb>彼</keb><ke_pri>ichi1</ke_pri></k_ele><r_ele><reb>あれ</reb></r_ele>
+<sense><misc>&uk;</misc><gloss>that</gloss></sense></entry>
+<entry><k_ele><keb>彼</keb><ke_pri>ichi1</ke_pri></k_ele><r_ele><reb>かれ</reb></r_ele>
+<sense><gloss>he</gloss><gloss>him</gloss></sense></entry>
 <entry><k_ele><keb>珍語</keb></k_ele><r_ele><reb>ちんご</reb></r_ele><sense><gloss>rare word</gloss></sense></entry>
 </JMdict>"""
         with tempfile.TemporaryDirectory() as d:
             p = Path(d) / "jm.xml"
             p.write_text(xml, encoding="utf-8")
-            entries = build_dictionary(p)
-        self.assertEqual(entries["猫"]["glosses"], ["cat"])
-        self.assertIn("ねこ", entries)
-        self.assertNotIn("珍語", entries)  # not common, filtered out
+            data = build_dictionary(p)
+        words = data["words"]
+        self.assertEqual(words["猫"][0]["g"], ["cat"])  # first sense only
+        self.assertNotIn("ねこ", words)  # kana spelling of a kanji word isn't indexed
+        self.assertNotIn("は", words)  # so は can't become "feather"
+        self.assertIn("あれ", words)  # usually-kana word is indexed by reading
+        self.assertEqual(len(words["彼"]), 2)
+        self.assertNotIn("珍語", words)  # not common, filtered out
+
+
+class TestDictionary(unittest.TestCase):
+    def setUp(self):
+        from app.dictionary import Dictionary
+
+        self.d = Dictionary({
+            "彼": [{"r": ["あれ"], "g": ["that"]}, {"r": ["かれ"], "g": ["he"]}],
+            "羽": [{"r": ["は"], "g": ["feather"]}],
+            "友達": [{"r": ["ともだち"], "g": ["friend"]}],
+        })
+
+    def test_reading_picks_the_right_entry(self):
+        self.assertEqual(self.d.lookup("彼", "彼", "カレ", "pronoun"), ["he"])
+        self.assertEqual(self.d.lookup("彼", "彼", "あれ", "pronoun"), ["that"])
+
+    def test_particles_use_role_table(self):
+        self.assertEqual(self.d.lookup("は", "は", "わ", "particle"), ["topic marker"])
+        self.assertEqual(self.d.lookup("です", "です", "です", "auxiliary"), ["is (polite)"])
+        self.assertEqual(self.d.lookup("ます", "まし", "まし", "auxiliary"), ["polite ending"])
+
+    def test_unknown_word(self):
+        self.assertEqual(self.d.lookup("ぴよ", "ぴよ", "ぴよ", "noun"), [])
 
 
 if __name__ == "__main__":

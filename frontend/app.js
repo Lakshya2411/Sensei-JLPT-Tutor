@@ -43,12 +43,14 @@ function metaLine(answer) {
 }
 
 // ---------- rendering ----------
-function renderTokens(tokens) {
+// contextGloss: optional {surface: meaning} from the LLM, which knows the sentence context;
+// the JMdict gloss is the fallback (it can't tell 彼 "he" from 彼 "that" on its own).
+function renderTokens(tokens, contextGloss = {}) {
   if (!tokens?.length) return "";
   const items = tokens
     .map((t) => {
       const rt = hasKanji(t.surface) && t.reading && t.reading !== t.surface ? `<rt>${esc(t.reading)}</rt>` : "<rt>&nbsp;</rt>";
-      const gloss = t.gloss?.[0] || t.pos;
+      const gloss = contextGloss[t.surface] || t.gloss?.[0] || t.pos;
       const cls = esc(t.pos.replace(/\s+/g, "-"));
       return `<span class="tok ${cls}" title="${esc(t.pos)} · base: ${esc(t.base)}"><ruby>${esc(t.surface)}${rt}</ruby><small>${esc(gloss)}</small></span>`;
     })
@@ -95,7 +97,7 @@ $("#explain-form").addEventListener("submit", (ev) => {
         ${a.literal ? `<p class="literal">Literally: ${esc(a.literal)}</p>` : ""}
         ${metaLine(a)}
       </div>
-      ${renderTokens(d.tokens)}
+      ${renderTokens(d.tokens, Object.fromEntries((a.words || []).filter((w) => w.surface && w.meaning).map((w) => [w.surface, w.meaning])))}
       ${grammar ? `<div class="card"><h2>Grammar in this sentence</h2>${grammar}</div>` : ""}
       ${a.tip ? `<div class="card"><h2>Tip</h2><p>${esc(a.tip)}</p></div>` : ""}
       ${renderSources(d.sources)}`;

@@ -71,26 +71,39 @@ COMMON_TAGS = {"news1", "ichi1", "spec1", "spec2", "gai1"}
 
 
 def build_dictionary(xml_path: Path) -> dict:
-    """Keep only common words (priority tags) so the file stays small."""
-    entries: dict[str, dict] = {}
+    """Common JMdict words -> list of candidate entries.
+
+    One written form can belong to several entries (彼 = かれ "he" or あれ
+    "that"), so every common entry is kept and the backend picks the one whose
+    reading matches SudachiPy's reading. Only the FIRST sense's glosses are
+    stored: mixing senses gives nonsense like "he; that; boyfriend".
+
+    Kana spellings are indexed only for words that have no kanji or are
+    usually written in kana; otherwise は would find 羽 ("feather").
+    """
+    words: dict[str, list] = {}
     for _, el in ET.iterparse(xml_path, events=("end",)):
         if el.tag != "entry":
             continue
         kanji = [(k.findtext("keb"), {p.text for p in k.findall("ke_pri")}) for k in el.findall("k_ele")]
         readings = [(r.findtext("reb"), {p.text for p in r.findall("re_pri")}) for r in el.findall("r_ele")]
-        is_common = any(tags & COMMON_TAGS for _, tags in kanji + readings)
-        if is_common:
-            glosses = []
-            for sense in el.findall("sense"):
-                glosses += [g.text for g in sense.findall("gloss") if g.text]
-                if len(glosses) >= 4:
-                    break
-            info = {"readings": [r for r, _ in readings][:3], "glosses": glosses[:4]}
-            for word, _ in kanji + readings:
-                if word and word not in entries:
-                    entries[word] = info
+        if any(tags & COMMON_TAGS for _, tags in kanji + readings):
+            senses = el.findall("sense")
+            first = [g.text for g in senses[0].findall("gloss") if g.text][:3] if senses else []
+            usually_kana = any(
+                "kana alone" in (m.text or "") or (m.text or "") == "uk"
+                for s in senses for m in s.findall("misc")
+            )
+            if first:
+                entry = {"r": [r for r, _ in readings][:4], "g": first}
+                keys = [k for k, _ in kanji]
+                if not kanji or usually_kana:
+                    keys += [r for r, _ in readings]
+                for key in keys:
+                    if key:
+                        words.setdefault(key, []).append(entry)
         el.clear()
-    return entries
+    return {"version": 2, "words": words}
 
 
 # ---------------- embeddings ----------------
@@ -132,7 +145,7 @@ def main() -> None:
     if jmdict.exists():
         d = build_dictionary(jmdict)
         (OUT / "dictionary.json").write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
-        print(f"Wrote {len(d)} dictionary headwords -> data/processed/dictionary.json")
+        print(f"Wrote {len(d['words'])} dictionary headwords -> data/processed/dictionary.json")
     else:
         print("No data/raw/JMdict_e.xml (run scripts/download_data.py jmdict); skipping dictionary")
 

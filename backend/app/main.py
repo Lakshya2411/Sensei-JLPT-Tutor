@@ -55,7 +55,7 @@ def analyze_tokens(text: str) -> list[dict]:
     out = []
     for t in nlp.analyze(text):
         row = t.to_dict()
-        row["gloss"] = d.lookup(t.base, t.surface, t.reading)[:2]
+        row["gloss"] = d.lookup(t.base, t.surface, t.reading, t.pos)[:2]
         out.append(row)
     return out
 

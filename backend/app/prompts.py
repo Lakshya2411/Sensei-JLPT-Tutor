@@ -42,7 +42,7 @@ Return JSON with exactly these keys:
 {{
   "translation": "natural English translation",
   "literal": "word-for-word gloss",
-  "words": [{{"surface": "...", "reading": "hiragana", "meaning": "short English gloss"}}],
+  "words": [{{"surface": "exactly as in the morphological analysis", "reading": "hiragana", "meaning": "1-4 word English gloss for this word IN THIS SENTENCE (for particles, its role, e.g. topic marker)"}}],
   "grammar": [{{"id": "grammar note id from the list above", "pattern": "...", "how_it_is_used_here": "1-2 sentences"}}],
   "tip": "one short learning tip"
 }}
