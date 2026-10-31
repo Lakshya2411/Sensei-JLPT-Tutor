@@ -8,10 +8,18 @@ A web app for Japanese learners (JLPT N5–N4) that:
 
 Built to run entirely on free tiers.
 
+## Live demo
+
+**[sensei-jlpt-tutor-frontend.vercel.app](https://sensei-jlpt-tutor-frontend.vercel.app)**
+
+> The backend runs on Render's free tier and sleeps when idle, so the first request can take about a minute. If the badge says "backend offline", wait a moment and refresh.
+
+API health check: [sensei-jlpt-tutor.onrender.com/health](https://sensei-jlpt-tutor.onrender.com/health)
+
 ## Architecture
 
 ```
-Static site (Vercel)  ──────────►  FastAPI backend (HF Spaces / Render)
+Static site (Vercel)  ──────────►  FastAPI backend (Render, Docker)  
                                          │
                                          ├─ SudachiPy: word segmentation, readings, dictionary forms
                                          ├─ JMdict lookup: English glosses (no LLM needed)
@@ -34,7 +42,7 @@ data/grammar/     Hand-written grammar notes (the knowledge base)
 scripts/          download_data.py, build_index.py
 eval/             Retrieval eval set + script (recall@k, MRR)
 frontend/         Static site: index.html, app.js, style.css, config.js
-Dockerfile        Backend image for HF Spaces / Render / Cloud Run
+Dockerfile        Backend image for Render (also works on Cloud Run)
 ```
 
 ## Run it locally
@@ -80,17 +88,20 @@ cd .. && python eval/eval_retrieval.py --show-misses
 
 ## Deploy for free
 
-**Backend → Hugging Face Spaces (Docker)**
-1. Create a Space with the **Docker** SDK. Check which hardware the free plan allows when you create it.
-2. Push this repo to the Space (it uses the root `Dockerfile`, port 7860). Commit `data/processed/` first.
-3. In the Space settings, add secrets `GEMINI_API_KEY`, `GROQ_API_KEY`, and set
-   `ALLOWED_ORIGINS` to your frontend URL.
+The live demo runs on Render (backend) and Vercel (frontend), both on free plans.
 
-Alternatives: Render (free web service, sleeps when idle) or Google Cloud Run, using the same Dockerfile.
+**Backend → Render (Docker)**
+1. Build the knowledge base locally (`download_data.py`, then `build_index.py`) and commit `data/processed/`.
+2. On Render, create a **Web Service** from this repo. It detects the root `Dockerfile`; choose the **Free** instance type.
+3. Add environment variables `GEMINI_API_KEY` and `GROQ_API_KEY`.
+4. Deploy and open `<your-service>.onrender.com/health` to check that examples and dictionary words loaded.
 
-**Frontend → Vercel / Netlify / Cloudflare Pages**
-1. Set `window.SENSEI_API` in `frontend/config.js` to your backend URL.
-2. Deploy the `frontend/` folder as a static site (no build step).
+**Frontend → Vercel**
+1. Set `window.SENSEI_API` in `frontend/config.js` to your Render URL.
+2. Import the repo on Vercel with **Root Directory** set to `frontend` and framework preset **Other** (no build step).
+3. Back on Render, set `ALLOWED_ORIGINS` to your Vercel URL (exact match, no trailing slash) so the browser can call the API.
+
+Free Render services sleep after about 15 minutes without traffic and wake on the next request.
 
 ## Evaluation
 
@@ -113,7 +124,8 @@ paraphrased questions (aim for 100) before quoting numbers on a resume.
 - [ ] 100-question retrieval eval; add embeddings and compare
 - [ ] Fine-tune a 1.5B–3B model with QLoRA (Unsloth on Kaggle/Colab) on Lang-8 for corrections
 - [ ] Three-way comparison: prompting vs RAG vs fine-tuned (precision/recall/F0.5)
-- [ ] Deploy, record a demo GIF, add results to this README
+- [x] Deploy (Render + Vercel, free tiers)
+- [ ] Record a demo GIF and add results to this README
 
 ## Credits
 
